@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="header">
+    <main class="container">
+      <header class="header">
         <h3>Anuncie aqui para vender seu carro mais rápido</h3>
-      </div>
-      <div class="form-container">
+      </header>
+      <section class="form-container">
         <div class="form-header">
           <p>Formulário</p>
         </div>
@@ -113,15 +113,15 @@
                 required
               />
             </div>
-            <div class="box-input">
-              <p>Câmbio <span class="required-field">*</span></p>
+            <fieldset class="box-input">
+              <legend>Câmbio <span class="required-field">*</span></legend>
               <input type="radio" id="manual" name="gear" />
               <label for="manual">Manual</label>
               <input type="radio" id="automático" name="gear" />
               <label for="automático">Automático</label>
-            </div>
-            <div class="optional-box">
-              <p>Opcionais</p>
+            </fieldset>
+            <fieldset class="optional-box">
+              <legend>Opcionais</legend>
               <ul class="optional-list">
                 <li>
                   <input
@@ -155,8 +155,8 @@
                   <label for="reverse-camera">Câmera de Ré</label>
                 </li>
               </ul>
-            </div>
-            <div class="optional-box">
+            </fieldset>
+            <fieldset class="optional-box">
               <ul class="optional-list">
                 <li>
                   <input
@@ -174,7 +174,7 @@
                     name="optional[]"
                     value="keyless"
                   />
-                  <label for="keyless">Partida Keyless</label>
+                  <label for="keyless">Start - Stop</label>
                 </li>
                 <li>
                   <input
@@ -195,7 +195,7 @@
                   <label for="leather_seat">Banco de couro</label>
                 </li>
               </ul>
-            </div>
+            </fieldset>
             <div class="box-input">
               <p>Fotos do carro <span class="required-field">*</span></p>
               <input
@@ -210,7 +210,7 @@
             <input type="submit" value="Enviar" class="btn-submit" />
           </form>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </body>
 </html>
