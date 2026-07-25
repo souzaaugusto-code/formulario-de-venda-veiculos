@@ -21,25 +21,6 @@ label {
   color: #333;
 }
 
-input {
-  border: none;
-  border-bottom: 1px solid #ccc;
-  padding: 10px 0;
-}
-
-input[type="text"],
-input[type="number"],
-input[type="date"],
-input[type="file"],
-textarea {
-  width: 400px;
-  color: #666;
-}
-
-textarea {
-  padding: 10px 5px;
-}
-
 .header {
   height: 160px;
   padding: 20px;
@@ -61,6 +42,9 @@ textarea {
   margin: 0 auto;
   position: relative;
   top: -62px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .form-header {
@@ -80,7 +64,7 @@ textarea {
 }
 
 .form-body {
-  padding: 30px;
+  padding: 40px;
 }
 
 .form-title {
@@ -99,8 +83,77 @@ textarea {
   margin-bottom: 35px;
 }
 
+.box-input p {
+  margin-bottom: 15px;
+  color: #333;
+}
+
 .block {
   display: block;
+}
+
+input {
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px 12px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: #673ab7;
+  box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.15);
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="file"],
+textarea {
+  width: 400px;
+  color: #666;
+}
+
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #673ab7;
+  box-shadow: 0 0 0 3px rgba(103, 58, 183, 0.15);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  width: auto;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #333;
 }
 
 .optional-box {
@@ -110,27 +163,42 @@ textarea {
 
 .optional-list li {
   list-style: none;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.box-input p {
-  margin-bottom: 15px;
-  color: #333;
+.optional-list li label {
+  cursor: pointer;
+}
+
+fieldset input[type="radio"] {
+  margin-right: 4px;
+  cursor: pointer;
+}
+
+fieldset input[type="radio"] + label {
+  margin-right: 20px;
+  cursor: pointer;
 }
 
 .btn-submit {
   background-color: #673ab7;
   color: #fff;
   border: 2px solid transparent;
+  border-radius: 6px;
   width: 150px;
   height: 50px;
+  margin-top: 10px;
   cursor: pointer;
   text-transform: uppercase;
-  transition: 0.5s;
+  transition: 0.3s ease;
 }
 
 .btn-submit:hover {
   background-color: #fff;
   border-color: #673ab7;
   color: #673ab7;
+  box-shadow: 0 4px 12px rgba(103, 58, 183, 0.25);
 }
